@@ -39,7 +39,7 @@ deploy_preview:
 deploy_production:
   stage: deploy
   only:
-    - master
+    - main
   #   rules:
   #     - when: manual
   script:
