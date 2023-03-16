@@ -12,8 +12,11 @@
         "singleQuote": true,
         "endOfLine": "auto"
       }
-    ]
+    ],
+
+    "import/no-extraneous-dependencies": "off"
   },
+
   "overrides": [
     // Configuration for TypeScript files
     {

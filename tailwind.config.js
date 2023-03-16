@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -19,7 +20,7 @@ module.exports = {
       colors: {
         dark: {
           100: '#31373E',
-          200:'#151515'
+          200: '#151515',
         },
         gray: {
           100: '#f7fafc',
@@ -46,14 +47,15 @@ module.exports = {
       },
     },
     backgroundImage: {
-      'bg-primary': "url('/assets/images/background.png')"
+      'bg-primary': "url('/assets/images/background.png')",
+      'bg-header': "url('/assets/images/background-header.png')",
     },
     fontFamily: {
       ArcaMajora3: ['var(--font-arcaMajora3)', ...fontFamily.sans],
       BeVietNamPro: ['var(--font-bevietnampro)', ...fontFamily.serif],
       Cabin: ['var(--font-cabin)', ...fontFamily.sans],
       Arena: ['var(--font-arena)', ...fontFamily.sans],
-    }
+    },
   },
   plugins: [],
 };
