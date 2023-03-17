@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import type { ReactNode } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
@@ -25,12 +24,10 @@ const Main = (props: IMainProps) => (
         </div>
       </header> */}
       <main className="text-xl">{props.children}</main>
-      <footer className="container mx-auto mt-32 px-4 py-20 text-center text-sm">
-        <Image
+      <footer className="container mx-auto mt-32 px-4 py-10 text-center text-sm md:py-20">
+        <img
           alt="nextverse"
-          width={544}
-          height={102}
-          className="mx-auto"
+          className="mx-auto h-[102px] w-[544px]"
           src={Logo}
         />
         <div className="mt-10">
