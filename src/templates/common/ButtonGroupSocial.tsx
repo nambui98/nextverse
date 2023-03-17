@@ -31,23 +31,19 @@ const ButtonGroupSocial = (props: Props) => {
         >
           <i
             className={clsx(
-              `bx ${social.icon} bx-border-circle bx-tada border- cursor-pointer transition-all${color} text- border text-3xl${color}`,
+              `bx ${social.icon} bx-border-circle bx-tada cursor-pointer border text-3xl transition-all`,
               {
                 'border-white': color === 'white',
-              },
-              {
+                'text-white': color === 'white',
+
                 'border-dark-100': color !== 'white',
-              },
-              {
+                'text-dark-100': color !== 'white',
+
                 'hover:border-transparent': color !== 'white',
-              },
-              {
+
                 'hover:text-[#3b5998] hover:bg-white': index === 0,
-              },
-              {
+
                 'hover:text-[#1DA1F2] hover:bg-white': index === 1,
-              },
-              {
                 'hover:text-[#0088CC] hover:bg-white': index === 2,
               }
             )}
