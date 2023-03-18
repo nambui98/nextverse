@@ -1,56 +1,118 @@
 @tailwind base;
 
-a {
-  @apply text-blue-700;
-}
-
-a:hover {
-  @apply border-b-2 border-blue-700;
-}
-
 @tailwind components;
 
 @tailwind utilities;
-
+html{
+  scroll-behavior:smooth;
+}
 .input{
-  @apply rounded-2xl h-16 bg-white px-4 outline-none font-ArcaMajora3 transition-all border-2 border-transparent hover:border-gray-600 focus:border-dark-200 active:scale-95
+  @apply rounded-2xl h-16 xl:h-16 lg:h-14 bg-white px-4 outline-none font-ArcaMajora3 transition-all border-2 border-transparent hover:border-gray-600 focus:border-dark-200 active:scale-95 
 }
 
-.wrapCheckbox{
-  @apply relative
+.cbx {
+ position: relative;
+ top: 1px;
+ width: 27px;
+ height: 27px;
+ border: 1px solid #fff;
+ border-radius: 5px;
+ vertical-align: middle;
+ transition: background 0.1s ease;
+ cursor: pointer;
+ display: block;
 }
-.wrapCheckbox input{
-  @apply absolute opacity-0 cursor-pointer h-0 w-0
+
+.cbx:after {
+ content: '';
+ position: absolute;
+ top: 2px;
+ left: 8px;
+ width: 7px;
+ height: 14px;
+ opacity: 0;
+ transform: rotate(45deg) scale(0);
+ border-right: 2px solid #fff;
+ border-bottom: 2px solid #fff;
+ transition: all 0.3s ease;
+ transition-delay: 0.15s;
 }
-.checkmark{
-  @apply absolute top-0 left-0 h-7 w-7 bg-gray-300
+
+.lbl {
+ margin-left: 5px;
+ vertical-align: middle;
+ cursor: pointer;
 }
-.wrapCheckbox:hover input ~ .checkmark{
-  @apply bg-gray-400
+
+.cntr input:checked ~ .cbx {
+ border-color: transparent;
+ background: #151515;
+ animation: jelly 0.6s ease;
 }
-.wrapCheckbox input:checked ~ .checkmark{
-  @apply bg-dark-200
+
+.cntr input:checked ~ .cbx:after {
+ opacity: 1;
+ transform: rotate(45deg) scale(1);
 }
-.checkmark::after{
-  content: "";
-  position: absolute;
-  display: none;
+
+.cntr {
+ position: relative;
 }
-.wrapCheckbox input:checked ~ .checkmark::after{
-  display: block;
+
+@keyframes jelly {
+ from {
+  transform: scale(1, 1);
+ }
+
+ 30% {
+  transform: scale(1.25, 0.75);
+ }
+
+ 40% {
+  transform: scale(0.75, 1.25);
+ }
+
+ 50% {
+  transform: scale(1.15, 0.85);
+ }
+
+ 65% {
+  transform: scale(0.95, 1.05);
+ }
+
+ 75% {
+  transform: scale(1.05, 0.95);
+ }
+
+ to {
+  transform: scale(1, 1);
+ }
 }
-.wrapCheckbox .checkmark::after{
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 15px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
+
+.hidden-xs-up {
+ display: none!important;
 }
-/* .container{
-  background-color: rgb(2, 201, 118);
-            color: white;
-} */
+.swiper {
+  width: 100%;
+  height: 158px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: top;
+}
+.swiper-slide{
+  width: 80% !important;
+  height: 100%;
+}

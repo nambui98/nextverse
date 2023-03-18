@@ -22,6 +22,9 @@ module.exports = {
           100: '#31373E',
           200: '#151515',
         },
+        orange: {
+          100: '#ff9000',
+        },
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',
@@ -43,6 +46,23 @@ module.exports = {
           700: '#2b6cb0',
           800: '#2c5282',
           900: '#2a4365',
+        },
+      },
+      animation: {
+        circle: 'circle 1.5s ease-in-out infinite',
+      },
+      keyframes: {
+        circle: {
+          '0%': {
+            boxShadow: '0 0 0 0 rgba(255,145,0, 0.6)',
+          },
+
+          '70%': {
+            boxShadow: '0 0 0 15px rgba(255,145,0, 0.0)',
+          },
+          '100%': {
+            boxShadow: '0 0 0 0 rgba(255,145,0, 0.0)',
+          },
         },
       },
     },
