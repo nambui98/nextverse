@@ -24,7 +24,7 @@
 #     # promote to the vercel's production
 #     - ./node_modules/.bin/vercel --prod -t $VERCEL_TOKEN
 default:
-  image: node:14.15.0
+  image: node:14.18.0
 variables:
   VERCEL_TOKEN: $VERCEL_TOKEN
 
